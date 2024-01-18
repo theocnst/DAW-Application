@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SideNavigationComponent } from './home/side-navigation/side-navigation.component';
 import { MainNavigationComponent } from './home/main-navigation/main-navigation.component';
 import { MainPanelComponent } from './home/main-panel/main-panel.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { MainPanelComponent } from './home/main-panel/main-panel.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
