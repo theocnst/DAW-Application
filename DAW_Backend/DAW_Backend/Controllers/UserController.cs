@@ -63,10 +63,29 @@ namespace DAW_Backend.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(User user)
+        public async Task<IActionResult> Register([FromBody] User user)
         {
+            if (user == null || string.IsNullOrWhiteSpace(user.Email) || string.IsNullOrWhiteSpace(user.Password))
+            {
+                return BadRequest("User data is not valid.");
+            }
+
+            var existingUser = await _userRepository.GetUser(user.Email);
+            if (existingUser != null)
+            {
+                return Conflict("A user with the same email already exists.");
+            }
+
             var newUser = await _userRepository.Register(user);
-            return new OkObjectResult(newUser);
+            if (newUser == null)
+            {
+                return BadRequest("Unable to register the user.");
+            }
+
+            newUser.Password = null;
+
+            return Ok(newUser);
         }
+
     }
 }

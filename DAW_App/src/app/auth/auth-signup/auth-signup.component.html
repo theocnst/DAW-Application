@@ -22,6 +22,9 @@
           @if(!username.valid && username.touched) {
           <span class="validation_warning">Username is invalid!</span>
           }
+          @if(username.value.length < 4 && username.touched) { <span class="validation_warning">Username must be at
+            least 4 characters long!</span>
+            }
         </div>
 
         <!-- Email input -->
@@ -48,9 +51,30 @@
           @if(!password.valid && password.touched) {
           <span class="validation_warning">Password is invalid!</span>
           }
+          @if(password.value.length < 4 && password.touched) { <span class="validation_warning">Password must be at
+            least 4 characters long!</span>
+            }
         </div>
       </div>
       <button type="submit" class="btn btn_submit w-100" [disabled]="!f.valid">Sign up</button>
     </form>
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true" #errorModal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ errorMessage }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

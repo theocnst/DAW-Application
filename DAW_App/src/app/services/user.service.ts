@@ -50,4 +50,5 @@ export class UserService {
   register(user: User): Observable<User> {
     return this.httpClient.post<User>(`${this.baseURL}/Register`, user, this.httpOptions);
   }
+
 }

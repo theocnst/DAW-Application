@@ -60,6 +60,11 @@ namespace DAW_Backend.Repositories
 
         public async Task<User> Register(User user)
         {
+            if (_databaseContext.Users.Any(u => u.Email == user.Email))
+            {
+                return null;
+            }
+
             await _databaseContext.Users.AddAsync(user);
             await _databaseContext.SaveChangesAsync();
             return user;
