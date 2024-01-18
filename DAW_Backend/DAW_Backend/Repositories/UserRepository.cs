@@ -52,7 +52,10 @@ namespace DAW_Backend.Repositories
 
         public async Task<User> Login(string email, string password)
         {
-            return await _databaseContext.Users.FirstOrDefaultAsync(user => user.Email == email && user.Password == password);
+            var user = await _databaseContext.Users
+                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+
+            return user;
         }
 
         public async Task<User> Register(User user)

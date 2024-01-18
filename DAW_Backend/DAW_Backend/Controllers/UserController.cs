@@ -6,7 +6,7 @@ namespace DAW_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController
+    public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
 
@@ -54,8 +54,14 @@ namespace DAW_Backend.Controllers
         public async Task<IActionResult> Login(string email, string password)
         {
             var user = await _userRepository.Login(email, password);
+            if (user == null)
+            {
+                return new NotFoundObjectResult("User not found or password is incorrect.");
+            }
+
             return new OkObjectResult(user);
         }
+
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register(User user)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAW_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b6fb2f07467da6cf0848cc521a5adb82827b8b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+507c9bfa770c2eb1c8b7dac23ca37de2591068cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAW_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAW_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm, Validators, FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-auth-signup',
   templateUrl: './auth-signup.component.html',
