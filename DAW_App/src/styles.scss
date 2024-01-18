@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    // Font family
+    --ff-primary: 'Poppins', sans-serif;
+
+    // Font-weights
+    --fw-small: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi: 600;
+    --fw-bold: 700;
+
+    // Font-sizes
+    --fs-xsm: 0.625rem; // 12px => 10px
+    --fs-sm: 0.75rem; // 14px => 12px
+    --fs-base: 0.875rem; // 16px => 14px
+    --fs-md: 1rem; // 18px => 16px
+    --fs-xmd: 1rem; // 20px => 16px
+    --fs-lg: 1.125rem; // 28px => 18px
+    --fs-xl: 1.5rem; // 36px => 24px 
+
+    --fs-icons: 24px;
+
+    // Colors
+    --clr-primary: #392396;
+    --clr-primary-1: #5d3ee0;
+    --clr-primary-2: #7c61ef;
+    --clr-primary-3: #9b85fa;
+    --clr-primary-4: #c1b3ff;
+    --clr-primary-5: #eae5ff;
+    --clr-primary-6: #f5f3fd;
+
+    --clr-secondary: #ffd803;
+    --clr-secondary-1: #ffe038;
+    --clr-secondary-2: #ffe86b;
+    --clr-secondary-3: #fff09e;
+    --clr-secondary-4: #fff8d1;
+
+    --clr-accent: #e3f6f5;
+    --clr-accent-1: #eaf8f8;
+    --clr-accent-2: #edf9f9;
+    --clr-accent-3: #f1fbfa;
+    --clr-accent-4: #f4fcfb;
+
+    --clr-background: #eeeeee;
+
+    --clr-shadows: #190f42;
+
+    --clr-text-black: #0f0f0f;
+    --clr-text-white: #ffffff;
+
+    --clr-subtle-text-100: #7c797a;
+    --clr-subtle-text-200: #9a999a;
+
+    --clr-accent-text-100: #dedede;
+    --clr-accent-text-200: #e9e9e9;
+    --clr-accent-text-300: #fbfbfb;
+
+    --clr-warning: #ff0022;
+    --clr-succes: #25d366;
+
+    --clr-shadow: #abbed1;
+
+    --transition-2: 0.2s;
+    --transition-3: 0.3s;
+    --transition-5: 0.5s;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-base);
+    color: var(--clr-black);
+}
+
+// Font sizes for mobile
+@media(min-width: 768px) {
+    :root {
+        --fs-xsm: 0.75rem; // 10px => 12px
+        --fs-sm: 0.875rem; // 12px => 14px
+        --fs-base: 1rem; // 14px => 16px
+        --fs-md: 1.125rem; // 16px => 18px
+        --fs-xmd: 1.25rem; // 16px => 20px
+        --fs-lg: 1.75rem; // 18px => 28px
+        --fs-xl: 2.25rem; // 24px => 36px
+    }
+}
