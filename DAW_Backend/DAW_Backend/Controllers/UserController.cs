@@ -62,7 +62,6 @@ namespace DAW_Backend.Controllers
             return new OkObjectResult(user);
         }
 
-
         [HttpPost("Register")]
         public async Task<IActionResult> Register(User user)
         {

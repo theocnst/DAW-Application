@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { UserService } from '../../services/user.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 declare var bootstrap: any; // Declare Bootstrap's namespace
 
@@ -52,8 +53,14 @@ export class AuthLoginComponent implements AfterViewInit {
             this.authService.login(user);
             this.router.navigate(['/home']);
           },
-          error: (error) => {
-            this.errorMessage = 'An error occurred during login. Please try again.';
+          error: (error: HttpErrorResponse) => {
+            if (error.status === 404) {
+              this.errorMessage = 'User not found. Please check your credentials.';
+              this.modal.show();
+            } else {
+              this.errorMessage = 'An error occurred during login. Please try again.';
+              this.modal.show();
+            }
             console.error(error);
           }
         });
