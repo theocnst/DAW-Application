@@ -4,6 +4,7 @@ import { AuthSignupComponent } from './auth/auth-signup/auth-signup.component';
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
@@ -14,6 +15,8 @@ const appRoutes: Routes = [
         ]
     },
     { path: 'home', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+
 ]
 
 @NgModule({

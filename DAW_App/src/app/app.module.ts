@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { TopNavigationComponent } from './home/top-navigation/top-navigation.component';
 import { MainPanelComponent } from './home/main-panel/main-panel.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     MainPanelComponent,
     TopNavigationComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
