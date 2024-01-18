@@ -1,0 +1,10 @@
+.container-fluid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-inline: 0;
+}
+
+.main_view {
+    display: grid;
+    grid-template-columns: 16.5rem 1fr;
+}

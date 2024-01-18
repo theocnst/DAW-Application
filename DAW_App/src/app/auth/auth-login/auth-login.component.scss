@@ -1,0 +1,97 @@
+$clr-default: var(--clr-primary-1);
+$clr-hover: var(--clr-primary);
+
+.welcome_title {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semi);
+}
+
+.auth_signup {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+}
+
+.auth_signup > a:hover,
+.auth_signup > a:focus {
+    color: $clr-hover;
+}
+
+.auth_signup > a,
+.auth_signup > a:active {
+    color: $clr-default;
+    transition: all var(--transition-2);
+}
+
+.form_helpers > a:hover,
+.form_helpers > a:focus {
+    color: $clr-hover;
+}
+
+.form_helpers > a,
+.form_helpers > a:active{
+    color: $clr-default;
+    transition: all var(--transition-2);
+}
+
+.btn_submit:hover,
+.btn_submit:focus {
+    background-color: $clr-hover;
+}
+
+.btn_submit,
+.btn_submit:active
+ {
+    background-color: $clr-default;
+    color: var(--clr-text-white);
+    transition: all var(--transition-2);
+}
+
+.auth_signup {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.auth_icon {
+    font-size: var(--fs-xmd);
+}
+
+.form-control {
+    font-size: var(--fs-base);
+}
+
+.form_helpers {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.auth_panel {
+    padding: 1.5rem;
+}
+
+@media(max-width: 360px) {
+    .auth_signup {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form_helpers {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .auth_panel {
+        padding-inline: 0.5rem;
+    }
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid var(--clr-warning);
+}
+
+.validation_warning {
+    color: var(--clr-warning);
+    font-size: var(--fs-xsm);
+}
+
