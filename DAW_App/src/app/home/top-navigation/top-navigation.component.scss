@@ -1,6 +1,6 @@
 $clr-hover: var(--clr-primary-1);
 
-.navigation-menu {
+.top-navigation-menu {
     height: 100%;
     padding-inline: 1rem;
     padding-block: 1rem 2.25rem;
@@ -20,7 +20,7 @@ $clr-hover: var(--clr-primary-1);
     border-radius: 5px;
     padding-inline: 0.75rem;
     margin-bottom: 0.75rem;
-    transition:all var(--transition-3);
+    transition: all var(--transition-3);
 }
 
 .nav-item:hover,
@@ -29,8 +29,8 @@ $clr-hover: var(--clr-primary-1);
     color: var(--clr-text-white);
 }
 
-.nav-item:hover > a,
-.nav-item:focus > a {
+.nav-item:hover>a,
+.nav-item:focus>a {
     color: var(--clr-text-white);
 }
 
@@ -38,7 +38,7 @@ $clr-hover: var(--clr-primary-1);
     font-size: var(--fs-icons);
 }
 
-.nav-link {  
+.nav-link {
     padding: 0.75rem 0.5rem;
     color: var(--clr-text-black);
     cursor: pointer;
@@ -49,6 +49,6 @@ $clr-hover: var(--clr-primary-1);
     margin-top: auto;
 }
 
-.logout_item > .nav-link {
+.logout_item>.nav-link {
     color: var(--clr-warning);
 }

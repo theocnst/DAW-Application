@@ -9,7 +9,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AuthLoginComponent } from './auth/auth-login/auth-login.component';
 import { AuthSignupComponent } from './auth/auth-signup/auth-signup.component';
 import { HomeComponent } from './home/home.component';
-import { SideNavigationComponent } from './home/side-navigation/side-navigation.component';
+import { TopNavigationComponent } from './home/top-navigation/top-navigation.component';
 import { MainPanelComponent } from './home/main-panel/main-panel.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,8 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AuthComponent,
     AuthSignupComponent,
     HomeComponent,
-    SideNavigationComponent,
     MainPanelComponent,
+    TopNavigationComponent,
   ],
   imports: [
     BrowserModule,

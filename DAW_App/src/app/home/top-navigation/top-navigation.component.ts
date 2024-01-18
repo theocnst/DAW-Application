@@ -3,11 +3,11 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-side-navigation',
-  templateUrl: './side-navigation.component.html',
-  styleUrl: './side-navigation.component.scss'
+  selector: 'app-top-navigation',
+  templateUrl: './top-navigation.component.html',
+  styleUrl: './top-navigation.component.scss'
 })
-export class SideNavigationComponent {
+export class TopNavigationComponent {
   username = '';
 
   constructor(private authService: AuthService, private router: Router) { }
