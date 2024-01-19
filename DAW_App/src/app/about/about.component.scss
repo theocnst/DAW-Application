@@ -1,26 +1,24 @@
-@import 'bootstrap/scss/bootstrap'; // Asigură-te că acest import este la începutul fișierului SCSS
-
 .container {
     padding-top: 2rem;
     padding-bottom: 2rem;
 
     h2 {
         margin-bottom: 1rem;
-        color: #0056b3; // Schimbă culoarea în funcție de tema ta
+        color: #0056b3;
     }
 
     p {
         font-size: 1rem;
         line-height: 1.6;
-        color: #333; // Culoare text general
+        color: #333;
     }
 
     a {
-        color: #007bff; // Culoarea hyperlink-urilor
-        text-decoration: none; // Scoate sublinierea
+        color: #007bff;
+        text-decoration: none;
 
         &:hover {
-            text-decoration: underline; // Adaugă sublinierea la hover
+            text-decoration: underline;
         }
     }
 
@@ -28,7 +26,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 0.25rem;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1); // O umbră ușoară pentru imagine
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     .table {
@@ -41,17 +39,16 @@
         }
 
         th {
-            color: #007bff; // Culoarea header-ului tabelului
+            color: #007bff;
         }
     }
 }
 
 @media (min-width: 992px) {
 
-    // Breakpoint pentru layout-uri mari (desktop-uri)
     .container {
         .row {
-            align-items: center; // Aliniază vertical elementele din rând
+            align-items: center;
         }
     }
 }

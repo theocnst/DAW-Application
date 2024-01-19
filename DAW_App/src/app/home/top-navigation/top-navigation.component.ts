@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrl: './top-navigation.component.scss'
 })
 export class TopNavigationComponent {
-  username = '';
+  goToAbout() {
+    this.router.navigate(['/about']);
+  }
 
   constructor(private authService: AuthService, private router: Router) { }
 

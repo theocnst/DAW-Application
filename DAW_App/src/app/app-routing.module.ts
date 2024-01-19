@@ -7,7 +7,8 @@ import { AuthComponent } from './auth/auth.component';
 import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
+    //{ path: '', redirectTo: 'auth/login', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     {
         path: 'auth', component: AuthComponent, children: [
             { path: 'login', component: AuthLoginComponent },
